@@ -1,0 +1,48 @@
+{
+  "name": "racc",
+  "version": "0.2.8",
+  "description": "React Antd 通用组件解决方案",
+  "main": "./dist/index.esm.js",
+  "module": "./dist/index.esm.js",
+  "typings": "./dist/index.d.ts",
+  "authors": {
+    "name": "mingshined",
+    "email": "996578843@qq.com"
+  },
+  "repository": "/react-antd-components",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "public": "yarn run test && yarn publish",
+    "test": "umi-test",
+    "start": "umi-lib doc dev",
+    "build": "umi-lib build",
+    "build:docz": "umi-lib doc build"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.132",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "docz": "1.0.4",
+    "docz-theme-default": "^1.0.4",
+    "husky": "^0.14.3",
+    "ts-jest-babel-7": "^22.0.7",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3",
+    "umi-library": "^1.1.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^3.16.3",
+    "babel-plugin-import": "^1.11.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react-cropper": "^1.2.0"
+  }
+}

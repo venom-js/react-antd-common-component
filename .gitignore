@@ -1,0 +1,13 @@
+/yarn.lock
+/package-lock.json
+/dist
+/es
+/.docz
+/node_modules
+/.idea
+.idea
+yarn.lock
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+/.DS_Store

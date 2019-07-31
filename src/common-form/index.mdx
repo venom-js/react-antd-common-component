@@ -1,22 +1,45 @@
 ---
-name: '通用弹窗'
+name: 'CommonForm通用表单'
 route: /common-form
 order: 2
 sidebar: true
 fullpage: false
+menu: '数据录入'
 ---
 
-> 哈哈哈
+import { FormDataType } from './type';
+import { Input } from 'antd';
+import CommonForm from '.';
+import { Playground } from 'docz';
+import { PropsTable } from '../docz-components/';
+import { PropsList } from './PropsList';
 
-## 额额额
+## CommonForm 通用表单
 
-import LoadingButton from '../loading-button';
-import { Playground, Props } from 'docz';
+具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。
+
+## 何时使用
+
+- 用于创建一个实体或收集信息。
+- 需要对输入的数据类型进行校验时。
+- 配合 modal drawer 等组件使用
+
+## 表单
+
+我们为 form 提供了以下三种排列方式：
+
+- 水平排列：标签和表单控件水平排列；（默认）
+- 垂直排列：标签和表单控件上下垂直排列；
+- 行内排列：表单项水平行内排列。
+
+## 代码演示
+
+> 基础使用
 
 <Playground>
-  <LoadingButton onClick={() => false} btnProps={{ size: 'default' }}>
-    11
-  </LoadingButton>
+  <CommonForm formData={[{ key: 'name', label: '姓名', node: <Input /> }]} />
 </Playground>
 
-<Props of={LoadingButton} />
+## API
+
+<PropsTable dataSource={PropsList} />

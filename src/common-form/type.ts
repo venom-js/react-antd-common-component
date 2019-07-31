@@ -27,8 +27,8 @@ export interface CommonFormButtonProps {
   place?: PlaceType;
   isSubmitBtn?: boolean;
   isResetBtn?: boolean;
-  submitText?: string;
-  resetText?: string;
+  submitText?: string | React.ReactNode;
+  resetText?: string | React.ReactNode;
   submitBtnProps?: BaseButtonProps;
   resetBtnProps?: BaseButtonProps;
   submitLoading?: boolean;

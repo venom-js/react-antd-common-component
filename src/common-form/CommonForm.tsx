@@ -14,7 +14,7 @@ export default class CommonForm extends Component<CommonFormProps> {
   static defaultProps = {
     rowNum: 4,
     formProps: {
-      layout: 'inline'
+      layout: 'horizontal'
     }
   };
   btnProps: CommonFormButtonProps = initBtnProps();

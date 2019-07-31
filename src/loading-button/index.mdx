@@ -1,0 +1,35 @@
+---
+name: 'LoadingButton 加载按钮'
+route: /loadingButton
+order: 2
+sidebar: true
+fullpage: false
+menu: 通用
+---
+
+import LoadingButton from './LoadingButton';
+import { Playground, Props } from 'docz';
+import 'antd/lib/style/themes/default.less';
+import { Row, Col } from 'antd';
+import { PropsTable } from '../docz-components/';
+import { PropsList } from './PropsList';
+
+## LoadingButton 加载按钮
+
+按钮用于开始一个需要加载的操作
+
+## 何时使用
+
+当某个操作需要与服务端交互，用于过程中相应 loading 状态
+
+## 代码演示
+
+> 基础
+
+<Playground>
+  <LoadingButton onClick={() => true}>default</LoadingButton>
+</Playground>
+
+## API
+
+<PropsTable dataSource={PropsList} />

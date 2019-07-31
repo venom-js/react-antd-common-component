@@ -21,6 +21,7 @@ import {
   formatDate,
   useStateReducer
 } from './common-utils';
+import 'antd/dist/antd.css';
 
 export {
   CommonForm,

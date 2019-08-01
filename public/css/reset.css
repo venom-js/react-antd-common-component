@@ -1,3 +1,38 @@
-blockquote {
-  border-left: 2px solid red;
+.MenuHeadings__Submenu-gcrNS {
+  position: fixed;
+  right: 50px;
+  top: 100px;
+  border-left: 1px solid #ebedf0;
+}
+
+.MenuHeadings__Submenu-gcrNS a {
+  color: #314659 !important;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.MenuHeadings__Submenu-gcrNS a:hover {
+  /* border-left: 2px solid rgb(12, 65, 265); */
+  color: rgb(12, 65, 265) !important;
+}
+
+.Page__Container-eUbTcM {
+  width: 100%;
+  padding-right: 230px;
+}
+
+.Sidebar__Footer-eORsBO {
+  display: none;
+}
+
+.Playground__Wrapper-dxIvZt {
+  border-top: none;
+}
+
+.CodeMirror-line {
+  font-family: 'Lucida Console', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
+  font-size: 14px;
+  line-height: 2;
+  white-space: pre;
 }

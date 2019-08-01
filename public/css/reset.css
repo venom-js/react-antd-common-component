@@ -1,3 +1,7 @@
+body {
+  font-size: 14px !important;
+}
+
 .MenuHeadings__Submenu-gcrNS {
   position: fixed;
   right: 50px;
@@ -9,6 +13,10 @@
   color: #314659 !important;
   font-size: 12px;
   transition: 0.2s;
+  padding-left: 16px !important;
+  padding-bottom: 5px !important;
+  padding-top: 0 !important;
+  font-size: 12px !important;
 }
 
 .MenuHeadings__Submenu-gcrNS a:hover {
@@ -17,12 +25,13 @@
 }
 
 .Page__Container-eUbTcM {
-  width: 100%;
-  padding-right: 230px;
+  width: 100% !important;
+  padding-right: 250px !important;
+  padding-top: 60px !important;
 }
 
 .Sidebar__Footer-eORsBO {
-  display: none;
+  display: none !important;
 }
 
 .Playground__Wrapper-dxIvZt {
@@ -35,4 +44,79 @@
   font-size: 14px;
   line-height: 2;
   white-space: pre;
+}
+
+.Search__Wrapper-jMtieA {
+  position: fixed !important;
+  width: 100% !important;
+  padding-left: 280px !important;
+  box-shadow: 0 2px 8px #f0f1f2;
+  z-index: 999999 !important;
+}
+
+.Search__Wrapper-jMtieA input {
+  font-size: 12px;
+}
+
+.Search__Wrapper-jMtieA svg {
+  width: 15px;
+  height: 15px;
+}
+
+.Sidebar__Wrapper-dMteFe {
+  background: none !important;
+}
+
+.Logo__Wrapper-bzwKYh::before {
+  display: none;
+}
+
+.Logo__Wrapper-bzwKYh {
+  padding: 0 !important;
+  padding-left: 30px !important;
+}
+
+.Logo__Wrapper-bzwKYh::after {
+  content: 'RACC';
+  position: absolute !important;
+  left: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 15px;
+}
+
+.Sidebar__Menus-flsOIy {
+  margin-top: 45px;
+  border-right: 1px solid #e8e8e8;
+}
+
+.Menu__List-jKGdRw {
+  margin: 0 !important;
+}
+
+.Menu__List-jKGdRw .active {
+  background-color: #e6f7ff;
+  border-right: 4px solid #1890ff;
+  color: #1890ff;
+}
+
+.Menu__List-jKGdRw a {
+  padding: 10px 0 10px 50px;
+}
+
+.MenuLink__Wrapper-bIIltX a {
+  font-size: 14px;
+  color: #314659;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.UnorderedList-kkVuiO li::before {
+  display: none;
+}
+
+.UnorderedList-kkVuiO li {
+  list-style-type: circle;
+  margin-left: 15px;
+  margin-top: 5px;
 }

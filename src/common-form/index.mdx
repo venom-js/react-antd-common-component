@@ -1,18 +1,19 @@
 ---
-name: 'CommonForm通用表单'
+name: 'CommonForm表单'
 route: /common-form
-order: 2
 sidebar: true
 fullpage: false
-menu: '数据录入'
+menu: '组件'
 ---
 
-import { FormDataType } from './type';
-import { Input } from 'antd';
+import { Input, Row, Col } from 'antd';
 import CommonForm from '.';
-import { Playground } from 'docz';
-import { PropsTable } from '../docz-components/';
+import { PropsTable, PlaygroundPro } from '../docz-components/';
 import { PropsList } from './PropsList';
+import { Basic, Shrink, RowNum } from './demo';
+import BasicDocz from './demo/docz/Basic.mdx';
+import RowNumDocz from './demo/docz/RowNum.mdx';
+import ShrinkDocz from './demo/docz/Shrink.mdx';
 
 ## CommonForm 通用表单
 
@@ -23,10 +24,24 @@ import { PropsList } from './PropsList';
 - 用于创建一个实体或收集信息。
 - 需要对输入的数据类型进行校验时。
 - 配合 modal drawer 等组件使用
+- 用于详情页的信息展示
+
+
+## 特性
+
+- 组件内部封装Form.create()
+- 通过JSON构造Form实体，节约手写DOM的时间，提升了代码的优雅度
+- 简洁明了的API
+- 栅格化布局，多场景适用
 
 ## 表单
 
-我们为 form 提供了以下三种排列方式：
+我们提供了两种模式:
+
+- 普通模式
+- 收缩模式
+
+<span>可用 antd Form <code>layout</code> 属性实现三种排列方式：</span>
 
 - 水平排列：标签和表单控件水平排列；（默认）
 - 垂直排列：标签和表单控件上下垂直排列；
@@ -34,11 +49,56 @@ import { PropsList } from './PropsList';
 
 ## 代码演示
 
-> 基础使用
-
-<Playground>
-  <CommonForm formData={[{ key: 'name', label: '姓名', node: <Input /> }]} />
-</Playground>
+<Row gutter={24}>
+  <Col span={24}>
+    <PlaygroundPro
+      title="基础使用"
+      desc={
+        <Fragment>
+          <p>通过<code>formData</code>传入表单数据。</p>
+          <p>在组件外部通过函数返回formData JSON数据，有利于组件的维护，满足了纯动态表单的实现场景。</p>
+        </Fragment>
+      }
+      code={<BasicDocz />}
+      component={<Basic />}
+    />
+  </Col>
+  <Col span={24}>
+    <PlaygroundPro
+      title="指定每行显示节点个数"
+      desc={
+        <Fragment>
+          <p>
+            通过<code>rowNum</code>指定每行显示个数，默认一行显示4个节点。
+          </p>
+          <p>
+            <code>rowNum</code>可接收<code>number[]</code>
+            类型，可以用于指定不规则的显示。
+          </p>
+          <p>表单内元素包括操作按钮均为栅格布局，默认从左到右flex排列，若需要将操作项换行，可以指定rowNum为: [4, 4, 4]。</p>
+          <p><code>rowNum</code>需要被24整除。</p>
+        </Fragment>
+      }
+      code={<RowNumDocz />}
+      component={<RowNum />}
+    />
+  </Col>
+  <Col span={24}>
+    <PlaygroundPro
+      title="收缩状态"
+      desc={
+        <Fragment>
+          <p>当指定<code>mode</code>为<code>shrink</code>
+          时，为收缩状态，不指定则为默认状态。</p>
+          <p>收缩状态下，默认只显示一行，操作按钮占位一个栅格不换行。若需要换行，可以使用<code>rowNum</code>处理</p>
+          <p>当总节点个数不超过指定的<code>rowNum</code>个数时，不显示为收缩状态。</p>
+        </Fragment>
+      }
+      code={<ShrinkDocz />}
+      component={<Shrink />}
+    />
+  </Col>
+</Row>
 
 ## API
 

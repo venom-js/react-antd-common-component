@@ -45,6 +45,7 @@ const PropsTable: React.FC<PropsTableProps> = props => {
   }));
   return (
     <CommonTable
+      style={{ width: '100%', overflowX: 'auto' }}
       columns={getColumns()}
       dataSource={dataSource}
       rowKey={(row, index) => index.toString()}

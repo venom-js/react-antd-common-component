@@ -1,0 +1,63 @@
+---
+name: '快速上手'
+route: /quick-start
+sidebar: true
+fullpage: false
+---
+
+## 快速上手
+
+React Antd Common Components 致力于提供给程序员更为便捷，规范的开发体验。
+
+> 在开始之前，推荐先学习 React 16.x，Ant Design React，并正确安装和配置了 Node.js v8 或以上。
+> 官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识，并且已经完全掌握了 React 全家桶的正确开发方式和 antd 组件的正常使用。
+> 如果你刚开始学习 Antd，将 RACC 作为你的 UI 组件库可能不是最好的主意。
+
+推荐学习 [typescript](https://typescript.bootcss.com/) 来为你的项目添彩
+
+## 开始使用
+
+```
+  yarn add racc
+```
+
+在你的项目中添加 racc
+
+## 第一个例子
+
+这是一个最简单的 React Antd Common Components 组件的在线演示
+
+<iframe width="100%" height="500px" src="https://codesandbox.io/s/9pivb" />
+
+## 特性
+
+- 基于 react16.x，组件内部使用 hook 编写
+- 组件使用 typescript 编写，编译后带有.d.ts 声明文件
+
+## 按需加载
+
+组件库基于 babel-plugin-import 实现按需加载
+
+```
+import { LoadingButton } from 'racc
+```
+
+> tips：由于 antd 组件默认文案是英文，所以在项目中使用 racc 时，需要在 index.js 中指定中文，以及导入 antd 的默认 css 样式
+
+```
+import zhCN from 'antd/es/locale/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+// 也可以在index.less中导入，@import '~antd/lib/style/themes/default.less';
+import 'antd/dist/antd.css';
+
+const App:React.FC = props => {
+return (
+  <ConfigProvider locale={zhCN}>
+    <div>
+       Main Entry
+    </div>
+  </ConfigProvider>
+    )
+}
+```

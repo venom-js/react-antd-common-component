@@ -4,9 +4,20 @@ import { BaseButtonProps } from 'antd/lib/button/button';
 import {
   GetFieldDecoratorOptions,
   FormProps,
-  WrappedFormUtils
+  WrappedFormUtils,
+  FormComponentProps
 } from 'antd/lib/form/Form';
 import { ColProps } from 'antd/lib/col';
+
+export interface CommonFormState {
+  loading: boolean;
+  shrink: boolean;
+}
+
+export interface FormChildrenProps extends CommonFormProps, CommonFormState {
+  setState: (state: Partial<CommonFormState>) => void;
+  isBeyond?: boolean;
+}
 
 export declare type PlaceType =
   | 'start'
@@ -31,10 +42,13 @@ export interface CommonFormButtonProps {
   resetText?: string | React.ReactNode;
   submitBtnProps?: BaseButtonProps;
   resetBtnProps?: BaseButtonProps;
-  submitLoading?: boolean;
+  shrinkNode?: React.ReactNode[];
 }
 
-export default interface CommonFormProps {
+type ModeType = 'default' | 'shrink';
+
+export default interface CommonFormProps extends FormComponentProps {
+  mode?: ModeType;
   formData: FormDataType[];
   rowNum?: number | number[];
   formProps?: FormProps;
@@ -44,5 +58,4 @@ export default interface CommonFormProps {
   onSubmit?: (err: any, value: any) => any;
   onReset?: () => any;
   getForm?: (form: WrappedFormUtils) => any;
-  form?: WrappedFormUtils;
 }

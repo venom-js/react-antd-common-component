@@ -32,6 +32,7 @@ export interface FormDataType {
   label?: string | React.ReactNode;
   extra?: string | React.ReactNode;
   colProps?: ColProps;
+  formItemProps?: FormItemProps;
 }
 
 export interface CommonFormButtonProps {

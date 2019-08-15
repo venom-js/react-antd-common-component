@@ -56,6 +56,7 @@ const FormNode: React.FC<FormChildrenProps> = props => {
               <FormItem
                 style={{ marginBottom: 8 }}
                 {...props.formItemProps}
+                {...item2.formItemProps}
                 label={item2.label}
               >
                 {props.form.getFieldDecorator(item2.key, item2.options)(

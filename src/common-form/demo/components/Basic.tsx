@@ -9,9 +9,13 @@ import CommonForm from '../../components/CommonForm';
 
 const getFormData = (): FormDataType[] => {
   return [
-    { key: 'name', label: '姓名', node: <Input /> },
+    {
+      key: 'name',
+      label: '姓名',
+      node: <Input />
+    },
     { key: 'age', label: '年龄', node: <InputNumber min={0} /> },
-    { key: 'email', label: '邮箱', node: <Input /> },
+    { key: 'email', label: '邮箱', node: <Input /> }
   ];
 };
 

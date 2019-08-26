@@ -43,7 +43,7 @@ const RowNum: React.FC<Props> = props => {
           />
         </Col>
         <Col>
-          <Button onClick={() => setRowNum(value || 4)}>试一下</Button>
+          <Button onClick={() => setRowNum(value || rowNum)}>Try it</Button>
         </Col>
       </Row>
       <p style={{ color: 'rg(0. 0, 0 , 0)', textAlign: 'center', marginTop: 8 }}>

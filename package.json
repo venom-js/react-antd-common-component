@@ -1,6 +1,6 @@
 {
   "name": "racc",
-  "version": "0.3.2",
+  "version": "0.3.0",
   "description": "React Antd 通用组件解决方案",
   "main": "./dist/index.esm.js",
   "module": "./dist/index.esm.js",
@@ -25,9 +25,12 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.132",
+    "babel-plugin-import": "^1.11.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "docz": "1.0.4",
     "docz-theme-default": "^1.0.4",
+    "docz-theme-umi": "^2.1.1",
+    "docz-theme-yuque": "^1.0.2",
     "husky": "^0.14.3",
     "ts-jest-babel-7": "^22.0.7",
     "tslint": "^5.11.0",
@@ -39,7 +42,6 @@
   "license": "MIT",
   "dependencies": {
     "antd": "^3.20.7",
-    "babel-plugin-import": "^1.11.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "react-cropper": "^1.2.0"

@@ -15,7 +15,7 @@ const ModalTable: React.FC<ModalTableProps> = props => {
     <CommonModal
       modalProps={{
         footer: null,
-        width: 1050,
+        width: 1100,
         title: props.title,
         bodyStyle: {
           maxHeight: '550px',

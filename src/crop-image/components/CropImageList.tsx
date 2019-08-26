@@ -1,8 +1,8 @@
 import React, { useContext, Fragment } from 'react';
 import { Row, Col, Icon } from 'antd';
-import style from './index.less';
+import style from '../index.less';
 import PreviewImageModal from './PreviewImageModal';
-import { CropImageProps } from './type';
+import { CropImageProps } from '../type';
 import { useStateReducer } from 'src/common-utils';
 import { CropImageContext } from './CropImage';
 

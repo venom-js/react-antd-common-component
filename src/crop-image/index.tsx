@@ -1,2 +1,2 @@
-import CropImage from './CropImage';
+import CropImage from './components/CropImage';
 export default CropImage;

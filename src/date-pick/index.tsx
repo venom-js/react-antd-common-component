@@ -1,2 +1,2 @@
-import DatePick from './DatePick';
+import DatePick from './components/DatePick';
 export default DatePick;

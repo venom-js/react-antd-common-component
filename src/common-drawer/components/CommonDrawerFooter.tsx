@@ -1,9 +1,9 @@
-import styles from './index.less';
 import React, { useContext } from 'react';
 import { CommonDrawerContext } from './CommonDrawer';
 import { Button } from 'antd';
-import { commonDrawerState } from './reducer';
-import { DrawerFooterProps } from './type';
+import { commonDrawerState } from '../reducer';
+import { DrawerFooterProps } from '../type';
+import styles from '../index.less';
 import _ from 'lodash';
 
 const CommonDrawerFooter: React.FC = () => {

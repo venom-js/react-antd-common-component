@@ -17,7 +17,7 @@ interface EditButtonProps {
   cancelBtnProps?: BtnProps;
   saveBtnProps?: BtnProps;
   editBtnProps?: BtnProps;
-  afterCancel?: (isEdit: boolean) => void;
+  onCancel?: (isEdit: boolean) => void;
   onSave?: (isEdit: boolean) => Promise<any> | boolean;
   onClick?: (isEdit: boolean) => void;
 }
@@ -48,9 +48,9 @@ export default class EditButton extends Component<
   state = state;
   handleCancel = () => {
     this.setState({ isEdit: false }, () => {
-      const afterCancel = this.props.afterCancel;
-      if (afterCancel) {
-        afterCancel(this.state.isEdit);
+      const onCancel = this.props.onCancel;
+      if (onCancel) {
+        onCancel(this.state.isEdit);
       }
     });
   };
@@ -80,9 +80,9 @@ export default class EditButton extends Component<
     );
   };
   render() {
-    const { cancelBtnProps, saveBtnProps, editBtnProps } = this.props;
+    const { cancelBtnProps, saveBtnProps, editBtnProps, style } = this.props;
     return (
-      <div style={{ float: 'right', position: 'relative', top: -60 }}>
+      <div style={style}>
         {this.state.isEdit ? (
           <ButtonGroup>
             <Button {...cancelBtnProps} onClick={this.handleCancel}>

@@ -1,2 +1,2 @@
-import CommonDrawer from './CommonDrawer';
+import CommonDrawer from './components/CommonDrawer';
 export default CommonDrawer;

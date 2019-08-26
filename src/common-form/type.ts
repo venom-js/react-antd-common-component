@@ -43,12 +43,12 @@ export interface CommonFormButtonProps {
   resetText?: string | React.ReactNode;
   submitBtnProps?: BaseButtonProps;
   resetBtnProps?: BaseButtonProps;
-  shrinkNode?: React.ReactNode[];
+  shrinkNodes?: React.ReactNode[];
 }
 
 type ModeType = 'default' | 'shrink';
 
-export default interface CommonFormProps extends FormComponentProps {
+export default interface CommonFormProps extends FormComponentProps<any> {
   mode?: ModeType;
   formData: FormDataType[];
   rowNum?: number | number[];

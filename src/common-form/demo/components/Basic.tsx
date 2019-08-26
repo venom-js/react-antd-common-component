@@ -2,10 +2,10 @@
  * @name
  * @author MingShined
  */
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FormDataType } from 'src/common-form/type';
 import { Input, InputNumber } from 'antd';
-import CommonForm from '../../components/CommonForm';
+import CommonForm from 'src/common-form/components/CommonForm';
 
 const getFormData = (): FormDataType[] => {
   return [
@@ -23,10 +23,12 @@ interface Props {}
 
 const Basic: React.FC<Props> = props => {
   return (
-    <CommonForm
-      formItemProps={{ labelCol: { span: 6 }, wrapperCol: { span: 18 } }}
-      formData={getFormData()}
-    />
+    <Fragment>
+      <CommonForm
+        formItemProps={{ labelCol: { span: 6 }, wrapperCol: { span: 18 } }}
+        formData={getFormData()}
+      />
+    </Fragment>
   );
 };
 export default Basic;

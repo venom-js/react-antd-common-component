@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { CropImageProps } from './type';
+import { CropImageProps } from '../type';
 import { CropImageListState } from './CropImageList';
 import { CropImageContext } from './CropImage';
 import { Modal, Icon } from 'antd';
-import style from './index.less';
+import style from '../index.less';
 
 interface Props extends CropImageProps, CropImageListState {
   setState: (state: Partial<CropImageListState>) => void;

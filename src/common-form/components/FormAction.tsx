@@ -27,9 +27,15 @@ const FormAction: React.FC<FormChildrenProps> = props => {
   };
   return (
     props && (
-      <Row gutter={16} style={{ marginTop: 3 }} type="flex" justify={place} align="middle">
-        <Col>
-          {isSubmitBtn && (
+      <Row
+        gutter={16}
+        style={{ marginTop: 3 }}
+        type="flex"
+        justify={place}
+        align="middle"
+      >
+        {isSubmitBtn && (
+          <Col>
             <Button
               {...submitBtnProps}
               htmlType="submit"
@@ -37,41 +43,41 @@ const FormAction: React.FC<FormChildrenProps> = props => {
             >
               {submitText}
             </Button>
-          )}
-        </Col>
-        <Col>
-          {isResetBtn && (
+          </Col>
+        )}
+        {isResetBtn && (
+          <Col>
             <Button {...resetBtnProps} onClick={handleReset}>
               {resetText}
             </Button>
-          )}
-        </Col>
-        <Col>
-          {props.mode === 'shrink' && props.isBeyond && (
+          </Col>
+        )}
+        {props.mode === 'shrink' && props.isBeyond && (
+          <Col>
             <Button
               type="link"
               onClick={() => props.setState({ shrink: !props.shrink })}
             >
               {props.shrink
                 ? (props.btnProps &&
-                    props.btnProps.shrinkNode &&
-                    props.btnProps.shrinkNode[0]) || (
+                    props.btnProps.shrinkNodes &&
+                    props.btnProps.shrinkNodes[0]) || (
                     <span>
                       展开
                       <Icon type="down" />
                     </span>
                   )
                 : (props.btnProps &&
-                    props.btnProps.shrinkNode &&
-                    props.btnProps.shrinkNode[1]) || (
+                    props.btnProps.shrinkNodes &&
+                    props.btnProps.shrinkNodes[1]) || (
                     <span>
                       收缩
                       <Icon type="up" />
                     </span>
                   )}
             </Button>
-          )}
-        </Col>
+          </Col>
+        )}
       </Row>
     )
   );

@@ -11,7 +11,7 @@ const LoadingButton: React.FC<LoadingButtonProps> = props => {
   const handleClick = async () => {
     setLoading(true);
     await props.onClick();
-    setTimeout(() => setLoading(false), 500);
+    setLoading(false);
   };
   const { btnProps } = props;
   return (

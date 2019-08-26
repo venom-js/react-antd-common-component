@@ -3,7 +3,7 @@
  * @author MingShined
  */
 import React, { useMemo } from 'react';
-import { CropImageProps, CropImageContextProps } from './type';
+import { CropImageProps, CropImageContextProps } from '../type';
 import CropImageModal from './CropImageModal';
 import CropImageList from './CropImageList';
 import { Row, Col } from 'antd';

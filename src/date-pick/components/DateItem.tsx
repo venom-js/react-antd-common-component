@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { DatePickContext } from '../DatePick';
+import { DatePickContext } from './DatePick';
 import { formatDate } from '../utils';
 import { DatePicker } from 'antd';
 

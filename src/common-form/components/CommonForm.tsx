@@ -9,7 +9,7 @@ import styles from '../index.less';
 import FormNode from './FormNode';
 import { useStateReducer } from 'src/common-utils';
 
-const CommonForm: React.FC<CommonFormProps> = props => {
+const CommonFormInit: React.FC<CommonFormProps> = props => {
   const [state, setState] = useStateReducer<CommonFormState>({
     loading: false,
     shrink: true
@@ -28,7 +28,7 @@ const CommonForm: React.FC<CommonFormProps> = props => {
       if (onSubmit) {
         setState({ loading: true });
         await onSubmit(err, values);
-        setTimeout(() => setState({ loading: false }), 500);
+        setState({ loading: false });
       }
     });
   };
@@ -41,4 +41,4 @@ const CommonForm: React.FC<CommonFormProps> = props => {
   );
 };
 
-export default Form.create<CommonFormProps>()(CommonForm);
+export default Form.create<CommonFormProps>()(CommonFormInit);

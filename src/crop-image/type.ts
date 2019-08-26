@@ -1,7 +1,7 @@
 import { ImportFileProps } from '../import-file/type';
 import { ModalProps } from 'antd/lib/modal';
 import { IconProps } from 'antd/lib/icon';
-import { CropImageState } from './CropImage';
+import { CropImageState } from './components/CropImage';
 
 export interface CropImageProps {
   importFileProps?: Partial<ImportFileProps>;

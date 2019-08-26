@@ -4,8 +4,8 @@
  */
 import React, { Fragment, useReducer } from 'react';
 import { Drawer, Button, Spin } from 'antd';
-import { CommonDrawerProps, CommonDrawerContextProps } from './type';
-import { reducer, commonDrawerState, CommonDrawerState } from './reducer';
+import { CommonDrawerProps, CommonDrawerContextProps } from '../type';
+import { reducer, commonDrawerState, CommonDrawerState } from '../reducer';
 import CommonDrawerFooter from './CommonDrawerFooter';
 import _ from 'lodash';
 

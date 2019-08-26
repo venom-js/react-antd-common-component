@@ -3,7 +3,7 @@ import Cropper from 'react-cropper';
 import 'cropperjs/dist/cropper.css';
 import { Modal } from 'antd';
 import { CropImageContext } from './CropImage';
-import { CropImageProps } from './type';
+import { CropImageProps } from '../type';
 
 interface Props extends CropImageProps {}
 const CropImageModal: React.FC<Props> = props => {

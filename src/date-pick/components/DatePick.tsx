@@ -3,11 +3,11 @@
  * @author MingShined
  */
 import React, { useState, useMemo } from 'react';
-import { getInitValue } from './utils';
-import { DatePickProps, DatePickContextProps } from './type';
+import { getInitValue } from '../utils';
+import { DatePickProps, DatePickContextProps } from '../type';
 import _ from 'lodash';
-import DateItem from './components/DateItem';
-import RangeItem from './components/RangeItem';
+import DateItem from './DateItem';
+import RangeItem from './RangeItem';
 
 export const DatePickContext = React.createContext<DatePickContextProps>(null);
 

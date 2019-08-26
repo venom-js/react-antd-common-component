@@ -40,6 +40,16 @@ const FormDataTypeList: PropsTableType[] = [
     key: 'colProps',
     desc: 'antd ColProps',
     type: 'ColProps'
+  },
+  {
+    key: 'formItemProps',
+    desc: 'antd FormItemProps',
+    type: (
+      <Link
+        href="https://ant.design/components/form-cn/#Form"
+        text="FormItemProps"
+      />
+    )
   }
 ];
 
@@ -47,7 +57,7 @@ const CommonFormButtonPropsList: PropsTableType[] = [
   {
     key: 'place',
     desc: '按钮位置',
-    type: 'start | end | center | space-around| space-between',
+    type: '"start" | "end" | "center" | "space-around" | "space-between"',
     defaultValue: 'end'
   },
   {
@@ -97,9 +107,9 @@ const CommonFormButtonPropsList: PropsTableType[] = [
     defaultValue: '{ type: "default" }'
   },
   {
-    key: 'submitLoading',
-    desc: '提交按钮loading',
-    type: 'boolean'
+    key: 'shrinkNodes',
+    desc: '展开 / 收缩按钮',
+    type: 'React.ReactNode[]'
   }
 ];
 
@@ -121,6 +131,12 @@ export const PropsList: PropsTableType[] = [
     desc: '每行渲染节点个数',
     type: 'number | number[]',
     defaultValue: 4
+  },
+  {
+    key: 'mode',
+    desc: '每行渲染节点个数',
+    type: '’shrink‘ | ’default‘',
+    defaultValue: 'default'
   },
   {
     key: 'formProps',

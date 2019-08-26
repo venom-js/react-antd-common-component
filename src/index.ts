@@ -10,6 +10,7 @@ import InputRange from './input-range';
 import CityPicker from './city-picker';
 import ImportFile from './import-file';
 import CropImage from './crop-image';
+import EditButton from './edit-button';
 import { defaultColumnProps } from './common-table/utils';
 import {
   renderEnumItem,
@@ -21,7 +22,7 @@ import {
   formatDate,
   useStateReducer
 } from './common-utils';
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 
 export {
   CommonForm,
@@ -44,5 +45,6 @@ export {
   ImportFile,
   formatDate,
   useStateReducer,
-  CropImage
+  CropImage,
+  EditButton
 };

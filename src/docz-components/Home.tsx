@@ -13,7 +13,7 @@ const IndexPage: React.FC<Props> = props => {
       <div className={styles.content}>
         <h1>让组件编写更具效率化</h1>
         <Button>
-          <a href="/quick-start">继续了解</a>
+          <a href="/racc/quick-start">继续了解</a>
         </Button>
       </div>
     </div>

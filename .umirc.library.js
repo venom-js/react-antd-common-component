@@ -16,6 +16,7 @@ module.exports = {
   ],
   doc: {
     plugins: [],
+    base: '/racc',
     // theme: 'docz-theme-umi',
     external: ['react', 'react-dome', 'antd'],
     indexHTML: 'index.html',

@@ -8,10 +8,9 @@ import { transform } from './utils';
 import address from './address';
 import { Cascader } from 'antd';
 
-export interface CityPickerProps {
+export interface CityPickerProps extends Partial<CascaderProps> {
   showCity?: boolean;
   showArea?: boolean;
-  cascadeProps?: Partial<CascaderProps>;
 }
 
 const CityPicker: React.FC<CityPickerProps> = props => {
@@ -29,9 +28,9 @@ const CityPicker: React.FC<CityPickerProps> = props => {
       fieldNames={{ label: 'label', value: 'value', children: 'children' }}
       showSearch
       allowClear
+      placeholder="请选择"
       options={options}
       {...extendProps}
-      {...extendProps.cascadeProps}
     />
   );
 };

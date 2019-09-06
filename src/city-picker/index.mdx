@@ -6,4 +6,75 @@ fullpage: false
 menu: '组件'
 ---
 
-> 敬请期待
+import { Row, Col } from 'antd';
+import { Basic, Area, City, Custom } from './demo';
+import { PropsTable, PlaygroundPro } from '../docz-components/';
+import PropsList from './PropsList';
+
+## CityPicker 城市选择器
+
+用于需要选择省市区，或者其他级联关系的场景
+
+## 何时使用
+
+- 中国省市区列表
+- 其他级联场景
+
+## 代码演示
+
+<Row gutter={24}>
+  <Col md={24} xl={12}>
+    <PlaygroundPro
+      title="基础使用"
+      desc="基础使用，组件内部内置标准全国省市区数据"
+      component={<Basic />}
+    />
+  </Col>
+  <Col md={24} xl={12}>
+    <PlaygroundPro
+      title="只筛选省市"
+      desc={
+        <span>
+          可以通过指定<code>showArea:false</code>过滤区域数据源，只选择省市数据
+        </span>
+      }
+      component={<Area />}
+    />
+  </Col>
+  <Col md={24} xl={12}>
+    <PlaygroundPro
+      title="只筛选省"
+      desc={
+        <span>
+          可以通过指定<code>showArea:false</code>
+          <code>showCity:false</code>过滤城市以及区域数据源，只选择省数据
+        </span>
+      }
+      component={<City />}
+    />
+  </Col>
+  <Col md={24} xl={12}>
+    <PlaygroundPro
+      title="自定义级联数据源"
+      desc={
+        <span>
+          可以通过指定<code>showArea:false</code>
+          <code>showCity:false</code>过滤城市以及区域数据源，只选择省数据
+        </span>
+      }
+      component={<Custom />}
+    />
+  </Col>
+</Row>
+
+## API
+
+```
+/** 组件props继承自 Antd Cascader 组件props */
+interface CityPickerProps extends Partial<CascaderProps> {
+  showCity?: boolean;
+  showArea?: boolean;
+}
+```
+
+<PropsTable dataSource={PropsList} />

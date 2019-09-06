@@ -1,0 +1,41 @@
+/**
+ * @name
+ * @author MingShined
+ */
+import React, { Fragment } from 'react';
+import CityPicker from 'src/city-picker';
+
+const dataSource = [
+  {
+    title: '银河系',
+    id: 1,
+    children: [
+      {
+        title: '太阳系',
+        id: 101,
+        children: [
+          {
+            title: '地球',
+            id: 10101
+          }
+        ]
+      }
+    ]
+  }
+];
+
+interface Props {}
+
+const Custom: React.FC<Props> = props => {
+  return (
+    <Fragment>
+      <CityPicker
+        options={dataSource}
+        filedNames={{ value: 'id', label: 'title', children: 'children' }}
+        showCity={false}
+        showArea={false}
+      />
+    </Fragment>
+  );
+};
+export default Custom;

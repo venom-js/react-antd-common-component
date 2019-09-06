@@ -47,10 +47,10 @@ module.exports = {
           //   rel: 'stylesheet',
           //   href: 'https://cdn.bootcss.com/antd/3.20.7/antd.min.css'
           // }
-          // {
-          //   rel: 'stylesheet',
-          //   href: 'http://211.159.185.85:8081/public/css/reset.css'
-          // },
+          {
+            rel: 'stylesheet',
+            href: 'http://venom.org.cn/racc/public/css/reset.css'
+          },
           {
             rel: 'stylesheet',
             href: '/public/css/reset.css'

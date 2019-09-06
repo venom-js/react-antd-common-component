@@ -19,10 +19,6 @@ const CommonDrawer: React.FC<CommonDrawerProps> = props => {
     drawerProps: {
       maskClosable: true,
       destroyOnClose: true,
-      maskStyle: {
-        backgroundColor: '#000',
-        opacity: 0.5
-      },
       bodyStyle: {
         paddingBottom: 72
       }
@@ -63,11 +59,7 @@ const CommonDrawer: React.FC<CommonDrawerProps> = props => {
       <Button type="primary" {...extendProps.btnProps} onClick={handleClick}>
         {extendProps.btnText}
       </Button>
-      <Drawer
-        onClose={handleCancel}
-        {...drawerProps}
-        visible={visible}
-      >
+      <Drawer onClose={handleCancel} {...drawerProps} visible={visible}>
         {visible && (
           <Fragment>
             <Spin spinning={loading}>{props.children}</Spin>

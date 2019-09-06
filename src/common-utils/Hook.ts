@@ -1,5 +1,10 @@
 import React, { useReducer, Reducer } from 'react';
 
+interface ContextProps<T> {
+  state: T;
+  setState: (state: Partial<T>) => void;
+}
+
 export function useStateReducer<T = any>(initState: T) {
   type Dispatch = Partial<T>;
   const reducer = (origin: T, payload: Dispatch): T => ({
@@ -14,10 +19,6 @@ export function useStateReducer<T = any>(initState: T) {
 }
 
 export function useCreateContext<T>() {
-  interface ContextProps {
-    state: T;
-    setState: (state: Partial<T>) => void;
-  }
-  const Context = React.createContext<ContextProps>(null);
+  const Context = React.createContext<ContextProps<T>>(null);
   return Context;
 }

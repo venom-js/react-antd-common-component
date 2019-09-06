@@ -1,7 +1,7 @@
 import { renderDateItem, getAppointedDate, formatDate } from './Date';
 import { separateArrayToKey, renderToolTipItem } from './Common';
 import { renderEnumItem, transformEnumKeys } from './Object';
-import { useStateReducer } from './Hook';
+import { useStateReducer, useCreateContext } from './Hook';
 
 export {
   renderDateItem,
@@ -11,5 +11,6 @@ export {
   renderToolTipItem,
   renderEnumItem,
   transformEnumKeys,
-  useStateReducer
+  useStateReducer,
+  useCreateContext
 };

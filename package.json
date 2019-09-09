@@ -1,6 +1,6 @@
 {
   "name": "racc",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "React Antd 通用组件解决方案",
   "main": "./dist/index.esm.js",
   "module": "./dist/index.esm.js",

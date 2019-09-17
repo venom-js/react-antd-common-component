@@ -10,6 +10,10 @@ import { Row, Col } from 'antd';
 import { Basic, Area, City, Custom } from './demo';
 import { PropsTable, PlaygroundPro } from '../docz-components/';
 import PropsList from './PropsList';
+import BasicDoc from './demo/docs/Basic.mdx';
+import AreaDoc from './demo/docs/Area.mdx';
+import CityDoc from './demo/docs/City.mdx';
+import CustomDoc from './demo/docs/Custom.mdx';
 
 ## CityPicker 城市选择器
 
@@ -28,6 +32,18 @@ import PropsList from './PropsList';
       title="基础使用"
       desc="基础使用，组件内部内置标准全国省市区数据"
       component={<Basic />}
+      code={<BasicDoc />}
+    />
+    <PlaygroundPro
+      title="只筛选省"
+      desc={
+        <span>
+          可以通过指定<code>showArea:false</code>
+          <code>showCity:false</code>过滤城市以及区域数据源，只选择省数据
+        </span>
+      }
+      component={<City />}
+      code={<CityDoc />}
     />
   </Col>
   <Col md={24} xl={12}>
@@ -39,21 +55,8 @@ import PropsList from './PropsList';
         </span>
       }
       component={<Area />}
+      code={<AreaDoc />}
     />
-  </Col>
-  <Col md={24} xl={12}>
-    <PlaygroundPro
-      title="只筛选省"
-      desc={
-        <span>
-          可以通过指定<code>showArea:false</code>
-          <code>showCity:false</code>过滤城市以及区域数据源，只选择省数据
-        </span>
-      }
-      component={<City />}
-    />
-  </Col>
-  <Col md={24} xl={12}>
     <PlaygroundPro
       title="自定义级联数据源"
       desc={
@@ -63,6 +66,7 @@ import PropsList from './PropsList';
         </span>
       }
       component={<Custom />}
+      code={<CustomDoc />}
     />
   </Col>
 </Row>

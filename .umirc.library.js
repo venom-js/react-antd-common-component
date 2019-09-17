@@ -18,7 +18,7 @@ module.exports = {
     plugins: [],
     base: '/racc',
     // theme: 'docz-theme-umi',
-    external: ['react', 'react-dome', 'antd'],
+    external: ['react', 'react-dom', 'antd'],
     indexHTML: 'index.html',
     styles: {
       body: `

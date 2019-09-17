@@ -18,7 +18,13 @@
     "test": "umi-test",
     "start": "umi-lib doc dev",
     "build": "umi-lib build",
-    "build:docz": "umi-lib doc build"
+    "build:docz": "umi-lib doc build",
+    "lint:test": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json --fix",
+    "preupload": "git add .",
+    "upload": "git commit -am",
+    "precommit": "npm run lint:test",
+    "postcommit": "git push"
   },
   "peerDependencies": {
     "react": "16.x"

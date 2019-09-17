@@ -115,6 +115,10 @@
     overflow: hidden;
   }
 
+  .MenuLink__Wrapper-bIIltX a:after {
+    display: none;
+  }
+
   .UnorderedList-kkVuiO li::before {
     display: none;
   }

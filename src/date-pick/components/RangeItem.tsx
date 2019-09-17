@@ -15,7 +15,7 @@ const RangeItem: React.FC = () => {
   };
   const getFormat = () => {
     if (!rangePickerProps || (!rangePickerProps.showTime && !rangePickerProps.format)) {
-      return ['YYYY-MM-DDT00:00:00Z', 'YYYY-MM-DDT23:59:59Z'];
+      return ['YYYY-MM-DD 00:00:00', 'YYYY-MM-DD 23:59:59'];
     }
     if (rangePickerProps.showTime && !rangePickerProps.format) {
       return ['YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm:ss'];

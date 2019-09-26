@@ -116,7 +116,7 @@
   }
 
   .MenuLink__Wrapper-bIIltX a:after {
-    display: none;
+    display: none!important;
   }
 
   .UnorderedList-kkVuiO li::before {

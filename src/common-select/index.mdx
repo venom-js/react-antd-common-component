@@ -6,8 +6,24 @@ fullpage: false
 menu: '组件'
 ---
 
-> 敬请期待
-
 import CommonSelect from '.';
+import { Row, Col } from 'antd';
+import { PropsTable, PlaygroundPro } from '../docz-components/';
 
-<CommonSelect dataSource={[{ label: 'xx', value: 1 }]} style={{ width: 200 }} />
+## CommonSelect 选择器
+
+下拉选择器
+
+## 何时使用
+
+- 弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。
+- 当选项少时（少于 5 项），建议直接将选项平铺，使用 Radio 是更好的选择。
+
+## 代码演示
+
+<Row gutter={24}>
+  <Col span={12}>
+    {/* <PlaygroundPro code={} component={} title="基本使用" /> */}
+  </Col>
+  <Col span={12} />
+</Row>

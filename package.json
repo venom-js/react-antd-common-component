@@ -1,6 +1,6 @@
 {
   "name": "racc",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "React Antd 通用组件解决方案",
   "main": "./dist/index.esm.js",
   "module": "./dist/index.esm.js",
@@ -47,7 +47,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "antd": "^3.20.7",
+    "antd": "3.26.13",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "react-cropper": "^1.2.0"

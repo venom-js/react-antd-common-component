@@ -1,6 +1,6 @@
 import { FormItemProps } from 'antd/lib/form';
 import { RowProps } from 'antd/lib/row';
-import { BaseButtonProps } from 'antd/lib/button/button';
+import { BaseButtonProps, ButtonProps } from 'antd/lib/button/button';
 import {
   GetFieldDecoratorOptions,
   FormProps,
@@ -41,9 +41,10 @@ export interface CommonFormButtonProps {
   isResetBtn?: boolean;
   submitText?: string | React.ReactNode;
   resetText?: string | React.ReactNode;
-  submitBtnProps?: BaseButtonProps;
-  resetBtnProps?: BaseButtonProps;
-  shrinkNodes?: React.ReactNode[];
+  submitBtnProps?: ButtonProps;
+  resetBtnProps?: ButtonProps;
+  shrinkNode?: React.ReactNode;
+  expandNode?: React.ReactNode;
 }
 
 type ModeType = 'default' | 'shrink';

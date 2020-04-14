@@ -19,8 +19,9 @@ export interface CommonDrawerProps {
   btnProps?: ButtonProps;
   onClick?: () => void;
   drawerFooterProps?: DrawerFooterProps;
-  footer?: boolean;
+  footer?: boolean | React.ReactNode;
   drawerProps?: DrawerProps;
+  extra?: React.ReactNode;
 }
 
 export interface CommonDrawerContextProps {

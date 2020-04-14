@@ -41,5 +41,13 @@ export function renderToolTipItem(
   emptyNode: string | React.ReactNode = '--'
 ): React.ReactNode {
   const text: string = value instanceof Array ? value.join(separator) : value;
-  return value ?  <Tooltip title={text}>{`${text.substr(0, length)}...`}</Tooltip> : emptyNode;
+  return value ? (
+    value.length > length ? (
+      <Tooltip title={text}>{`${text.substr(0, length)}...`}</Tooltip>
+    ) : (
+      value
+    )
+  ) : (
+    emptyNode
+  );
 }

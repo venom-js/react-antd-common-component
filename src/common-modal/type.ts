@@ -8,4 +8,5 @@ export interface CommonModalProps {
   btnProps?: ButtonProps;
   onClick?: () => void;
   modalProps?: ModalProps;
+  extra?: React.ReactNode;
 }

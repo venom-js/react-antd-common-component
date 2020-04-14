@@ -23,7 +23,7 @@ const CommonDrawer: React.FC<CommonDrawerProps> = props => {
         paddingBottom: 72
       }
     },
-    footer: true
+    footer: <CommonDrawerFooter />
   };
 
   const [state, dispatch] = useReducer(reducer, commonDrawerState);
@@ -36,7 +36,6 @@ const CommonDrawer: React.FC<CommonDrawerProps> = props => {
       callback();
     }
   };
-
   const handleCancel = () => {
     const { afterCancel } = props;
     setState(commonDrawerState);
@@ -44,7 +43,6 @@ const CommonDrawer: React.FC<CommonDrawerProps> = props => {
       afterCancel();
     }
   };
-
   const handleClick = async () => {
     if (props.onClick) {
       await props.onClick();
@@ -59,11 +57,12 @@ const CommonDrawer: React.FC<CommonDrawerProps> = props => {
       <Button type="primary" {...extendProps.btnProps} onClick={handleClick}>
         {extendProps.btnText}
       </Button>
+      {props.extra}
       <Drawer onClose={handleCancel} {...drawerProps} visible={visible}>
         {visible && (
           <Fragment>
             <Spin spinning={loading}>{props.children}</Spin>
-            {extendProps.footer && <CommonDrawerFooter />}
+            {extendProps.footer}
           </Fragment>
         )}
       </Drawer>

@@ -60,6 +60,7 @@ const CommonModal: React.FC<CommonModalProps> = props => {
       <Button type="primary" {...btnProps} onClick={handleClick}>
         {btnText}
       </Button>
+      {props.extra}
       <Modal
         {...modalProps}
         onCancel={handleCancel}

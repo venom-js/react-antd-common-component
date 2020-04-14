@@ -59,17 +59,13 @@ const FormAction: React.FC<FormChildrenProps> = props => {
               onClick={() => props.setState({ shrink: !props.shrink })}
             >
               {props.shrink
-                ? (props.btnProps &&
-                    props.btnProps.shrinkNodes &&
-                    props.btnProps.shrinkNodes[0]) || (
+                ? (props.btnProps && props.btnProps.expandNode) || (
                     <span>
                       展开
                       <Icon type="down" />
                     </span>
                   )
-                : (props.btnProps &&
-                    props.btnProps.shrinkNodes &&
-                    props.btnProps.shrinkNodes[1]) || (
+                : (props.btnProps && props.btnProps.shrinkNode) || (
                     <span>
                       收缩
                       <Icon type="up" />
